@@ -1,10 +1,10 @@
 const startBtn = document.getElementById("startBtn");
 const intro = document.getElementById("intro");
-const portfolio = document.getElementById("portfolio");
-const bgMusic = document.getElementById("bgMusic");
+const main = document.getElementById("main");
+const music = document.getElementById("bgMusic");
 
 startBtn.addEventListener("click", () => {
-  intro.classList.remove("active");
-  portfolio.classList.add("active");
-  bgMusic.play();
+  intro.classList.add("hidden");
+  main.classList.remove("hidden");
+  music.play();
 });

@@ -1,113 +1,115 @@
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-/* Halaman */
-.page {
-  display: none;
-  height: 100vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.page.active {
-  display: flex;
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* Intro Card */
-.intro-card {
-  background: #111;
-  border: 2px solid cyan;
-  box-shadow: 0 0 20px cyan;
-  border-radius: 15px;
-  padding: 30px;
+  background: black;
+  color: white;
   text-align: center;
-  width: 350px;
 }
 
-.profile-pic img {
+/* Intro Screen */
+.intro-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.intro-pic {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  border: 3px solid cyan;
+  border: 3px solid #0a3d91; /* biru tua */
+  margin-bottom: 20px;
 }
 
-.intro-text {
-  margin: 15px 0;
-  font-size: 14px;
+.intro-screen h1 {
+  margin-bottom: 20px;
+  color: cyan;
 }
 
-button {
-  background: cyan;
-  border: none;
+#startBtn {
+  background: black;
+  color: white;
+  border: 2px solid #0a3d91; /* biru tua */
   padding: 10px 20px;
   border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
-  color: #000;
-}
-button:hover {
-  background: #00bcd4;
+  transition: 0.3s;
 }
 
-/* Portfolio Page */
-header {
-  text-align: center;
+#startBtn:hover {
+  background: #0a3d91;
+}
+
+/* Main Screen */
+.hidden {
+  display: none;
+}
+
+.main-screen {
   padding: 20px;
 }
-header nav a {
-  margin: 0 10px;
+
+.main-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid cyan;
+  margin: 20px auto;
+  display: block;
+}
+
+.socials {
+  margin: 20px 0;
+}
+
+.socials a {
   color: cyan;
   text-decoration: none;
 }
-header nav a:hover {
-  text-decoration: underline;
+
+.about-box {
+  background: #111;
+  border: 2px solid cyan;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: left;
 }
 
-main {
-  padding: 20px;
-}
-h2 {
+.friends-title {
+  margin: 20px 0 10px;
   color: cyan;
 }
 
-/* Testimonial */
-.testimonial {
-  background: #111;
-  border-left: 4px solid cyan;
-  padding: 15px;
-  margin: 15px 0;
+/* Friends horizontal scroll */
+.friends-container {
   display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.testimonial img {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
 }
 
-/* Products */
-.product-grid {
-  display: flex;
-  gap: 15px;
-}
-.product-card {
-  flex: 1;
-  background: #111;
-  border: 2px solid cyan;
+.friend-card {
+  min-width: 200px;
+  background: #222;
+  border: 1px solid cyan;
   border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 15px cyan;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.friend-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }

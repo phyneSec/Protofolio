@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Halaman */
+.page {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.page.active {
+  display: flex;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Intro Card */
+.intro-card {
+  background: #111;
+  border: 2px solid cyan;
+  box-shadow: 0 0 20px cyan;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  width: 350px;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 3px solid cyan;
+}
+
+.intro-text {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+button {
+  background: cyan;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+}
+button:hover {
+  background: #00bcd4;
+}
+
+/* Portfolio Page */
+header {
+  text-align: center;
+  padding: 20px;
+}
+header nav a {
+  margin: 0 10px;
+  color: cyan;
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+h2 {
+  color: cyan;
+}
+
+/* Testimonial */
+.testimonial {
+  background: #111;
+  border-left: 4px solid cyan;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.testimonial img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+/* Products */
+.product-grid {
+  display: flex;
+  gap: 15px;
+}
+.product-card {
+  flex: 1;
+  background: #111;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px cyan;
+}
